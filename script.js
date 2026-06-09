@@ -81,11 +81,25 @@ function renderData(data) {
 
         if (!modal) return;
 
-        function openModal(title, img, desc, alt){
+        const galleryPrev = document.getElementById('gallery-prev');
+    const galleryNext = document.getElementById('gallery-next');
+    const galleryIndicator = document.getElementById('gallery-indicator');
+    let galleryImages = [];
+    let galleryIndex = 0;
+
+    function updateGalleryIndicator(){
+        if (!galleryImages.length) return;
+        galleryIndicator.textContent = `${galleryIndex + 1} / ${galleryImages.length}`;
+    }
+
+    function openModal(title, img, desc, alt, gallery = []){
             modalTitle.textContent = title || '';
-            modalImage.src = img || '';
+            galleryImages = gallery.length ? gallery : (img ? [img] : []);
+            galleryIndex = galleryImages.indexOf(img) >= 0 ? galleryImages.indexOf(img) : 0;
+            modalImage.src = galleryImages[galleryIndex] || '';
             modalImage.alt = alt || title || '';
             modalDesc.textContent = desc || '';
+            updateGalleryIndicator();
             modal.classList.add('show');
             modal.setAttribute('aria-hidden','false');
             document.body.style.overflow = 'hidden';
@@ -95,6 +109,15 @@ function renderData(data) {
             modal.setAttribute('aria-hidden','true');
             document.body.style.overflow = '';
             modalImage.src = '';
+            galleryImages = [];
+            galleryIndex = 0;
+        }
+
+        function changeGallery(delta){
+            if (!galleryImages.length) return;
+            galleryIndex = (galleryIndex + delta + galleryImages.length) % galleryImages.length;
+            modalImage.src = galleryImages[galleryIndex];
+            updateGalleryIndicator();
         }
 
         links.forEach(link=>{
@@ -104,10 +127,13 @@ function renderData(data) {
                 const img = link.dataset.image || '';
                 const desc = link.dataset.desc || '';
                 const alt = link.querySelector('img')?.alt || title;
-                openModal(title, img, desc, alt);
+                const gallery = link.dataset.gallery ? link.dataset.gallery.split(',').map(item => item.trim()).filter(Boolean) : [];
+                openModal(title, img, desc, alt, gallery);
             });
         });
 
+        if (galleryPrev) galleryPrev.addEventListener('click', () => changeGallery(-1));
+        if (galleryNext) galleryNext.addEventListener('click', () => changeGallery(1));
         if (modalClose) modalClose.addEventListener('click', closeModal);
         modal.addEventListener('click', (e)=>{
             if (e.target === modal) closeModal();

@@ -111,6 +111,12 @@
         .modal.show { display: flex; }
         .modal-content { background: var(--card-bg, #fff); padding: 18px; border-radius: 12px; max-width: 900px; width: 92%; max-height: 90%; overflow: auto; position: relative; }
         .modal-content img { max-width: 100%; height: auto; display: block; margin: 8px 0 12px; border-radius: 10px; }
+        .modal-image-wrapper { position: relative; display: grid; place-items: center; }
+        .gallery-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.85); border: 1px solid rgba(0,0,0,0.1); border-radius: 50%; width: 44px; height: 44px; font-size: 2rem; color: #6d4f5b; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .gallery-nav:hover { background: rgba(255,255,255,1); }
+        #gallery-prev { left: 10px; }
+        #gallery-next { right: 10px; }
+        .gallery-indicator { font-size: 0.95rem; color: var(--muted-color, #8b6072); text-align: center; margin-bottom: 12px; }
         .modal-close { position: absolute; top: 12px; right: 12px; background: var(--accent-color, #333); color: #fff; border: none; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
         footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
 
@@ -146,7 +152,7 @@
     <main>
         <article>
             <h2>Вебсайт готелю «Садиба»</h2>
-            <a href="#" class="portfolio-link" data-title="Вебсайт готелю «Садиба»" data-image="sadyba1.jpg" data-desc="Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом.">
+            <a href="#" class="portfolio-link" data-title="Вебсайт готелю «Садиба»" data-image="sadyba1.jpg" data-gallery="sadyba1.jpg,sadyba2.jpg,sadyba3.jpg,sadyba4.jpg" data-desc="Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом.">
                 <div class="portfolio-item">
                     <img src="sadyba1.jpg" alt="Фото готелю Садиба" loading="lazy">
                     <div class="portfolio-text">
@@ -183,7 +189,12 @@
             <div class="modal-content" role="dialog" aria-modal="true">
                 <button id="modal-close" class="modal-close">Закрити</button>
                 <h3 id="modal-title"></h3>
-                <img id="modal-image" src="" alt="">
+                <div class="modal-image-wrapper">
+                    <button id="gallery-prev" class="gallery-nav" aria-label="Попереднє фото">‹</button>
+                    <img id="modal-image" src="" alt="">
+                    <button id="gallery-next" class="gallery-nav" aria-label="Наступне фото">›</button>
+                </div>
+                <div class="gallery-indicator" id="gallery-indicator"></div>
                 <div id="modal-desc"></div>
             </div>
         </div>
