@@ -6,7 +6,6 @@ const userThemeNode = document.getElementById('user-theme');
 
 // Кнопки
 const themeToggleBtn = document.getElementById('theme-toggle');
-const nameToggleBtn = document.getElementById('name-toggle');
 const saveBtn = document.getElementById('save-btn');
 const toastNotification = document.getElementById('toast');
 
@@ -196,19 +195,6 @@ if (themeToggleBtn) {
         const nextTheme = (currentTheme === 'light') ? 'dark' : 'light';
         applyTheme(nextTheme);
         localStorage.setItem('user-selected-theme', nextTheme); // Зберігаємо вибір
-    });
-}
-
-// ОБРОБНИК КНОПКИ РЕДАГУВАННЯ ІМЕНІ
-if (nameToggleBtn && mainTitleName) {
-    nameToggleBtn.addEventListener('click', () => {
-        const currentName = mainTitleName.textContent.trim();
-        const newName = prompt('Введіть нове ім’я:', currentName);
-
-        if (newName && newName.trim()) {
-            mainTitleName.textContent = newName.trim();
-            localStorage.setItem('user-name', newName.trim());
-        }
     });
 }
 
