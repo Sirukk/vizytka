@@ -312,6 +312,10 @@ function renderData(data) {
     }
 
     let lastTouch = 0;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchMoved = false;
+
     function handlePortfolioOpen(e, link){
         if (e.type === 'click' && Date.now() - lastTouch < 500) return;
         if (e.cancelable) e.preventDefault();
@@ -325,9 +329,32 @@ function renderData(data) {
         openModal(title, img, desc, alt, gallery);
     }
 
+    function handlePortfolioTouchStart(e){
+        const touch = e.touches[0];
+        if (!touch) return;
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+        touchMoved = false;
+    }
+
+    function handlePortfolioTouchMove(e){
+        const touch = e.touches[0];
+        if (!touch) return;
+        if (Math.abs(touch.clientX - touchStartX) > 10 || Math.abs(touch.clientY - touchStartY) > 10) {
+            touchMoved = true;
+        }
+    }
+
+    function handlePortfolioTouchEnd(e, link){
+        if (touchMoved) return;
+        handlePortfolioOpen(e, link);
+    }
+
     links.forEach(link=>{
         link.addEventListener('click', (e)=> handlePortfolioOpen(e, link));
-        link.addEventListener('touchend', (e)=> handlePortfolioOpen(e, link));
+        link.addEventListener('touchstart', handlePortfolioTouchStart);
+        link.addEventListener('touchmove', handlePortfolioTouchMove);
+        link.addEventListener('touchend', (e)=> handlePortfolioTouchEnd(e, link));
     });
 
     if (galleryPrev) galleryPrev.addEventListener('click', () => changeGallery(-1));
