@@ -84,12 +84,35 @@ function renderData(data) {
         const galleryPrev = document.getElementById('gallery-prev');
     const galleryNext = document.getElementById('gallery-next');
     const galleryIndicator = document.getElementById('gallery-indicator');
+    const galleryThumbs = document.getElementById('gallery-thumbs');
     let galleryImages = [];
     let galleryIndex = 0;
 
     function updateGalleryIndicator(){
         if (!galleryImages.length) return;
         galleryIndicator.textContent = `${galleryIndex + 1} / ${galleryImages.length}`;
+    }
+
+    function renderGalleryThumbnails(){
+        if (!galleryThumbs) return;
+        galleryThumbs.innerHTML = '';
+        galleryImages.forEach((image, index) => {
+            const thumb = document.createElement('button');
+            thumb.type = 'button';
+            thumb.className = 'gallery-thumb' + (index === galleryIndex ? ' active' : '');
+            thumb.setAttribute('aria-label', `Фото ${index + 1}`);
+            const imgEl = document.createElement('img');
+            imgEl.src = image;
+            imgEl.alt = `Фото ${index + 1}`;
+            thumb.appendChild(imgEl);
+            thumb.addEventListener('click', () => {
+                galleryIndex = index;
+                modalImage.src = galleryImages[galleryIndex];
+                updateGalleryIndicator();
+                renderGalleryThumbnails();
+            });
+            galleryThumbs.appendChild(thumb);
+        });
     }
 
     function openModal(title, img, desc, alt, gallery = []){
@@ -100,6 +123,7 @@ function renderData(data) {
             modalImage.alt = alt || title || '';
             modalDesc.textContent = desc || '';
             updateGalleryIndicator();
+            renderGalleryThumbnails();
             modal.classList.add('show');
             modal.setAttribute('aria-hidden','false');
             document.body.style.overflow = 'hidden';
@@ -111,6 +135,7 @@ function renderData(data) {
             modalImage.src = '';
             galleryImages = [];
             galleryIndex = 0;
+            if (galleryThumbs) galleryThumbs.innerHTML = '';
         }
 
         function changeGallery(delta){
@@ -118,6 +143,7 @@ function renderData(data) {
             galleryIndex = (galleryIndex + delta + galleryImages.length) % galleryImages.length;
             modalImage.src = galleryImages[galleryIndex];
             updateGalleryIndicator();
+            renderGalleryThumbnails();
         }
 
         links.forEach(link=>{
