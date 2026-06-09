@@ -27,12 +27,14 @@
             color: var(--text-color, #3b2631); 
             max-width: 950px; 
             margin: 0 auto; 
-            padding: 20px; 
+            padding: 0 20px 20px; 
             background-color: var(--bg-color, #fff7fb); 
             transition: background-color 0.3s, color 0.3s;
         }
         header { 
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             background: var(--card-bg, #fff); 
             padding: 50px 35px 35px; 
             border-radius: 20px; 
@@ -182,7 +184,7 @@
         footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
 
         @media (max-width: 760px) {
-            body { padding: 15px; }
+            body { padding: 0 15px 15px; }
             header { padding: 40px 18px 25px; }
             .controls { position: static; justify-content: flex-end; margin-bottom: 15px; top: auto; right: auto; }
             header h1 { font-size: 2.2rem; }

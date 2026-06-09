@@ -49,6 +49,7 @@ const translations = {
         contactMessageLabel: 'Повідомлення',
         contactMessagePlaceholder: 'Як я можу вам допомогти?',
         contactSubmit: 'Надіслати повідомлення',
+        openGalleryBtn: 'Відкрити',
         modalCloseBtn: 'Закрити',
         contactSectionTitle: 'Контактна інформація',
         contactEmailLabelShort: 'Email:',
@@ -106,6 +107,7 @@ const translations = {
         contactMessageLabel: 'Message',
         contactMessagePlaceholder: 'How can I help you?',
         contactSubmit: 'Send Message',
+        openGalleryBtn: 'Open',
         modalCloseBtn: 'Close',
         contactSectionTitle: 'Contact Information',
         contactEmailLabelShort: 'Email:',
@@ -236,7 +238,7 @@ function renderData(data) {
 }
 
 (function(){
-    const links = document.querySelectorAll('.portfolio-link');
+    const buttons = document.querySelectorAll('.portfolio-open-btn');
     const modal = document.getElementById('portfolio-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalImage = document.getElementById('modal-image');
@@ -316,16 +318,18 @@ function renderData(data) {
     let touchStartY = 0;
     let touchMoved = false;
 
-    function handlePortfolioOpen(e, link){
+    function handlePortfolioOpen(e, button){
         if (e.type === 'click' && Date.now() - lastTouch < 500) return;
         if (e.cancelable) e.preventDefault();
         lastTouch = e.type === 'touchend' ? Date.now() : lastTouch;
+        const card = button.closest('.portfolio-card');
+        if (!card) return;
         const langSuffix = currentLang === 'en' ? 'En' : 'Uk';
-        const title = link.dataset[`title${langSuffix}`] || link.dataset.title || '';
-        const img = link.dataset.image || '';
-        const desc = link.dataset[`desc${langSuffix}`] || link.dataset.desc || '';
-        const alt = link.querySelector('img')?.alt || title;
-        const gallery = link.dataset.gallery ? link.dataset.gallery.split(',').map(item => item.trim()).filter(Boolean) : [];
+        const title = card.dataset[`title${langSuffix}`] || card.dataset.title || '';
+        const img = card.dataset.image || '';
+        const desc = card.dataset[`desc${langSuffix}`] || card.dataset.desc || '';
+        const alt = card.querySelector('img')?.alt || title;
+        const gallery = card.dataset.gallery ? card.dataset.gallery.split(',').map(item => item.trim()).filter(Boolean) : [];
         openModal(title, img, desc, alt, gallery);
     }
 
@@ -345,16 +349,16 @@ function renderData(data) {
         }
     }
 
-    function handlePortfolioTouchEnd(e, link){
+    function handlePortfolioTouchEnd(e, button){
         if (touchMoved) return;
-        handlePortfolioOpen(e, link);
+        handlePortfolioOpen(e, button);
     }
 
-    links.forEach(link=>{
-        link.addEventListener('click', (e)=> handlePortfolioOpen(e, link));
-        link.addEventListener('touchstart', handlePortfolioTouchStart);
-        link.addEventListener('touchmove', handlePortfolioTouchMove);
-        link.addEventListener('touchend', (e)=> handlePortfolioTouchEnd(e, link));
+    buttons.forEach(button=>{
+        button.addEventListener('click', (e)=> handlePortfolioOpen(e, button));
+        button.addEventListener('touchstart', handlePortfolioTouchStart);
+        button.addEventListener('touchmove', handlePortfolioTouchMove);
+        button.addEventListener('touchend', (e)=> handlePortfolioTouchEnd(e, button));
     });
 
     if (galleryPrev) galleryPrev.addEventListener('click', () => changeGallery(-1));
