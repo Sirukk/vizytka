@@ -103,6 +103,15 @@
         .portfolio-item { display: flex; gap: 24px; align-items: flex-start; }
         .portfolio-item img { width: 280px; max-width: 35%; display: block; margin: 0; border-radius: 15px; border: 1px solid var(--item-hover, #eee); }
         .portfolio-text { flex: 1; }
+        .portfolio-link { display: block; color: inherit; text-decoration: none; }
+        .portfolio-item:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.08); transform: translateY(-2px); transition: .18s ease; }
+
+        /* Modal for portfolio details */
+        .modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); z-index: 2000; }
+        .modal.show { display: flex; }
+        .modal-content { background: var(--card-bg, #fff); padding: 18px; border-radius: 12px; max-width: 900px; width: 92%; max-height: 90%; overflow: auto; position: relative; }
+        .modal-content img { max-width: 100%; height: auto; display: block; margin: 8px 0 12px; border-radius: 10px; }
+        .modal-close { position: absolute; top: 12px; right: 12px; background: var(--accent-color, #333); color: #fff; border: none; padding: 6px 10px; border-radius: 8px; cursor: pointer; }
         footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
 
         @media (max-width: 760px) {
@@ -137,32 +146,47 @@
     <main>
         <article>
             <h2>Проєкт в "IT-Kamianets"</h2>
-            <div class="portfolio-item">
-                <img src="voltlab_screen.png" alt="Скріншот проєкту VoltLab" loading="lazy">
-                <div class="portfolio-text">
-                    <p>Розробка інтерактивної платформи для проходження <strong>технічних та логічних квестів</strong>. В межах проєкту реалізовано систему поетапних завдань, ігрову логіку та зручний інтерфейс користувача на базі фреймворку Angular.</p>
+            <a href="#" class="portfolio-link" data-title="Проєкт в IT-Kamianets" data-image="voltlab_screen.png" data-desc="Розробка інтерактивної платформи для проходження технічних та логічних квестів. Система поетапних завдань, ігрова логіка та інтерфейс на базі Angular.">
+                <div class="portfolio-item">
+                    <img src="voltlab_screen.png" alt="Скріншот проєкту VoltLab" loading="lazy">
+                    <div class="portfolio-text">
+                        <p>Розробка інтерактивної платформи для проходження <strong>технічних та логічних квестів</strong>. В межах проєкту реалізовано систему поетапних завдань, ігрову логіку та зручний інтерфейс користувача на базі фреймворку Angular.</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </article>
         <article>
             <h2>Розробка графічних інтерфейсів (GUI)</h2>
-            <div class="portfolio-item">
-                <img src="gui_project.png" alt="Інтерфейс програми нарахування заробітної плати" loading="lazy">
-                <div class="portfolio-text">
-                    <p>Проєткування та реалізація десктопного інтерфейсу для автоматизації розрахунків. Проєкт демонструє роботу з табличними формами та логікою обробки подій у реальному часі.</p>
+            <a href="#" class="portfolio-link" data-title="GUI проект" data-image="gui_project.png" data-desc="Проєкт GUI для автоматизації нарахувань, робота з табличними формами та подіями в реальному часі.">
+                <div class="portfolio-item">
+                    <img src="gui_project.png" alt="Інтерфейс програми нарахування заробітної плати" loading="lazy">
+                    <div class="portfolio-text">
+                        <p>Проєткування та реалізація десктопного інтерфейсу для автоматизації розрахунків. Проєкт демонструє роботу з табличними формами та логікою обробки подій у реальному часі.</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </article>
         <article>
             <h2>Системне моделювання в MATLAB</h2>
-            <div class="portfolio-item">
-                <img src="matlab_graph.png" alt="Графік моделювання в MATLAB" loading="lazy">
-                <div class="portfolio-text">
-                    <p>Побудова математичних моделей складних систем та інтелектуальний аналіз даних для візуалізації результатів обчислень.</p>
+            <a href="#" class="portfolio-link" data-title="Моделювання в MATLAB" data-image="matlab_graph.png" data-desc="Моделювання систем та аналіз даних у MATLAB з візуалізацією результатів.">
+                <div class="portfolio-item">
+                    <img src="matlab_graph.png" alt="Графік моделювання в MATLAB" loading="lazy">
+                    <div class="portfolio-text">
+                        <p>Побудова математичних моделей складних систем та інтелектуальний аналіз даних для візуалізації результатів обчислень.</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </article>
     </main>
+        <!-- Modal for portfolio details -->
+        <div id="portfolio-modal" class="modal" aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true">
+                <button id="modal-close" class="modal-close">Закрити</button>
+                <h3 id="modal-title"></h3>
+                <img id="modal-image" src="" alt="">
+                <div id="modal-desc"></div>
+            </div>
+        </div>
     <footer>
         <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
     </footer>

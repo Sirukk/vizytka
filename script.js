@@ -70,6 +70,53 @@ function renderData(data) {
     }
 }
 
+    // Portfolio modal handlers
+    (function(){
+        const links = document.querySelectorAll('.portfolio-link');
+        const modal = document.getElementById('portfolio-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalImage = document.getElementById('modal-image');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalClose = document.getElementById('modal-close');
+
+        if (!modal) return;
+
+        function openModal(title, img, desc, alt){
+            modalTitle.textContent = title || '';
+            modalImage.src = img || '';
+            modalImage.alt = alt || title || '';
+            modalDesc.textContent = desc || '';
+            modal.classList.add('show');
+            modal.setAttribute('aria-hidden','false');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(){
+            modal.classList.remove('show');
+            modal.setAttribute('aria-hidden','true');
+            document.body.style.overflow = '';
+            modalImage.src = '';
+        }
+
+        links.forEach(link=>{
+            link.addEventListener('click', (e)=>{
+                e.preventDefault();
+                const title = link.dataset.title || '';
+                const img = link.dataset.image || '';
+                const desc = link.dataset.desc || '';
+                const alt = link.querySelector('img')?.alt || title;
+                openModal(title, img, desc, alt);
+            });
+        });
+
+        if (modalClose) modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e)=>{
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e)=>{
+            if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
+        });
+    })();
+
 // ЗАВАНТАЖЕННЯ З JSON
 async function loadUserData() {
     try {
