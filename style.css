@@ -152,3 +152,48 @@ main h2 {
     z-index: 1000;
     font-weight: bold;
 }
+
+@media (max-width: 760px) {
+    body {
+        padding: 15px;
+    }
+    header, .header-block {
+        padding: 30px 18px 30px;
+    }
+    header h1, .header-block h1 {
+        font-size: 2rem;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav a {
+        font-size: 1rem;
+    }
+    .controls {
+        position: static;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+        top: auto;
+        right: auto;
+    }
+    .btn, .btn-save {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+    main {
+        padding: 20px 0 0;
+    }
+    .profile-container, .about-grid, .discipline-grid, .events-list {
+        gap: 16px;
+    }
+    .profile-img, img {
+        max-width: 100%;
+        height: auto;
+    }
+    footer {
+        padding: 20px 10px;
+        font-size: 0.9rem;
+    }
+}

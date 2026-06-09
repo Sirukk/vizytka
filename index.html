@@ -141,6 +141,28 @@
             z-index: 1000;
         }
         footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
+
+        @media (max-width: 760px) {
+            body { max-width: 100%; padding: 15px; }
+            header { padding: 40px 18px 25px; }
+            .controls {
+                position: static;
+                justify-content: flex-end;
+                margin-bottom: 15px;
+                top: auto;
+                right: auto;
+            }
+            header h1 { font-size: 2.2rem; }
+            nav ul { flex-wrap: wrap; gap: 12px; justify-content: center; }
+            nav a { font-size: 1rem; }
+            .btn { padding: 8px 12px; font-size: 0.95rem; }
+            main { gap: 20px; }
+            .about-grid { grid-template-columns: 1fr; gap: 20px; }
+            .profile-pic { width: 100%; }
+            section { padding: 25px; }
+            .discipline-grid { grid-template-columns: 1fr; gap: 15px; }
+            footer { padding: 25px 10px; }
+        }
     </style>
 </head>
 <body>
@@ -148,7 +170,6 @@
         <div class="controls">
             <button class="btn" id="theme-toggle" title="Змінити тему">◐</button>
             <button class="btn" id="name-toggle" title="Редагувати профіль">✎</button>
-            <button id="save-btn" class="btn-save">Зберегти зміни</button> <!-- Кнопка перенесена сюди -->
         </div>
 
         <h1 class="main-title" id="main-title-name">Завантаження...</h1>
