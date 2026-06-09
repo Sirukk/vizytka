@@ -146,16 +146,22 @@ function renderData(data) {
             renderGalleryThumbnails();
         }
 
+        let lastTouch = 0;
+        function handlePortfolioOpen(e, link){
+            if (e.type === 'click' && Date.now() - lastTouch < 500) return;
+            if (e.cancelable) e.preventDefault();
+            lastTouch = e.type === 'touchend' ? Date.now() : lastTouch;
+            const title = link.dataset.title || '';
+            const img = link.dataset.image || '';
+            const desc = link.dataset.desc || '';
+            const alt = link.querySelector('img')?.alt || title;
+            const gallery = link.dataset.gallery ? link.dataset.gallery.split(',').map(item => item.trim()).filter(Boolean) : [];
+            openModal(title, img, desc, alt, gallery);
+        }
+
         links.forEach(link=>{
-            link.addEventListener('click', (e)=>{
-                e.preventDefault();
-                const title = link.dataset.title || '';
-                const img = link.dataset.image || '';
-                const desc = link.dataset.desc || '';
-                const alt = link.querySelector('img')?.alt || title;
-                const gallery = link.dataset.gallery ? link.dataset.gallery.split(',').map(item => item.trim()).filter(Boolean) : [];
-                openModal(title, img, desc, alt, gallery);
-            });
+            link.addEventListener('click', (e)=> handlePortfolioOpen(e, link));
+            link.addEventListener('touchend', (e)=> handlePortfolioOpen(e, link));
         });
 
         if (galleryPrev) galleryPrev.addEventListener('click', () => changeGallery(-1));
