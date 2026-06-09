@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо - Сірук Аліна</title>
+    <meta name="description" content="Портфоліо Сірук Аліни з навчальними IT-проєктами, веброзробкою, графічними інтерфейсами та моделюванням у MATLAB.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="Сірук Аліна">
+    <meta property="og:title" content="Портфоліо - Сірук Аліна">
+    <meta property="og:description" content="Портфоліо Сірук Аліни з навчальними IT-проєктами, веброзробкою, графічними інтерфейсами та моделюванням у MATLAB.">
+    <meta property="og:image" content="alina.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1063">
+    <meta property="og:image:height" content="1280">
+    <meta property="og:image:alt" content="Фото Сірук Аліни">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Портфоліо - Сірук Аліна">
+    <meta name="twitter:description" content="Портфоліо Сірук Аліни з навчальними IT-проєктами, веброзробкою, графічними інтерфейсами та моделюванням у MATLAB.">
+    <meta name="twitter:image" content="alina.jpg">
+    <meta name="twitter:image:alt" content="Фото Сірук Аліни">
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-color, #3b2631); 
+            max-width: 950px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: var(--bg-color, #fff7fb); 
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header { 
+            background: var(--card-bg, #fff); 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            margin-bottom: 30px; 
+            text-align: center; 
+        }
+        header h1 { 
+            margin: 0 0 15px 0; 
+            color: var(--title-color, #2a1721); 
+            font-size: 2.8rem; 
+            font-weight: 800; 
+            transition: color 0.5s ease, letter-spacing 0.5s ease;
+        }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 30px; }
+        nav a { text-decoration: none; color: var(--accent-color, #d65a8a); font-weight: 600; font-size: 1.1rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent-hover, #bf4776); }
+        nav a[aria-current="page"] { color: var(--text-color, #3b2631); border-bottom: 3px solid var(--accent-color, #d65a8a); padding-bottom: 5px; }
+        
+        main { display: grid; gap: 30px; }
+        article { 
+            background: var(--card-bg, #fff); 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03); 
+            border-left: 8px solid var(--accent-color, #d65a8a); 
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        article:hover { transform: translateY(-5px); }
+        article h2 { margin-top: 0; color: var(--title-color, #2a1721); font-weight: 700; border-bottom: 1px solid var(--item-hover, #f8d7e8); padding-bottom: 10px; }
+        img { width: 100%; border-radius: 15px; margin: 20px 0; border: 1px solid var(--item-hover, #eee); }
+        footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Проєкти та досягнення</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="portfolio.html" aria-current="page">Портфоліо</a></li>
+                <li><a href="events.html">Події</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Проєкт в "IT-Kamianets"</h2>
+            <img src="voltlab_screen.png" alt="Скріншот проєкту VoltLab" width="1280" height="622" loading="lazy">
+            <p>Розробка інтерактивної платформи для проходження <strong>технічних та логічних квестів</strong>. В межах проєкту реалізовано систему поетапних завдань, ігрову логіку та зручний інтерфейс користувача на базі фреймворку Angular.</p>
+        </article>
+        <article>
+            <h2>Розробка графічних інтерфейсів (GUI)</h2>
+            <img src="gui_project.png" alt="Інтерфейс програми нарахування заробітної плати" width="919" height="537" loading="lazy">
+            <p>Проєткування та реалізація десктопного інтерфейсу для автоматизації розрахунків. Проєкт демонструє роботу з табличними формами та логікою обробки подій у реальному часі.</p>
+        </article>
+        <article>
+            <h2>Системне моделювання в MATLAB</h2>
+            <img src="matlab_graph.png" alt="Графік моделювання в MATLAB" width="1280" height="684" loading="lazy">
+            <p>Побудова математичних моделей складних систем та інтелектуальний аналіз даних для візуалізації результатів обчислень.</p>
+        </article>
+    </main>
+    <footer>
+        <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Сірук Аліна</title>
+    <meta name="description" content="Контактна інформація Сірук Аліни: email, Telegram та місце навчання для зв'язку щодо навчальних і вебпроєктів.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="Сірук Аліна">
+    <meta property="og:title" content="Контакти - Сірук Аліна">
+    <meta property="og:description" content="Контактна інформація Сірук Аліни: email, Telegram та місце навчання для зв'язку щодо навчальних і вебпроєктів.">
+    <meta property="og:image" content="alina.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1063">
+    <meta property="og:image:height" content="1280">
+    <meta property="og:image:alt" content="Фото Сірук Аліни">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Контакти - Сірук Аліна">
+    <meta name="twitter:description" content="Контактна інформація Сірук Аліни: email, Telegram та місце навчання для зв'язку щодо навчальних і вебпроєктів.">
+    <meta name="twitter:image" content="alina.jpg">
+    <meta name="twitter:image:alt" content="Фото Сірук Аліни">
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-color, #3b2631); 
+            max-width: 950px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: var(--bg-color, #fff7fb); 
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header { 
+            background: var(--card-bg, #fff); 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            margin-bottom: 30px; 
+            text-align: center; 
+        }
+        header h1 { 
+            margin: 0 0 15px 0; 
+            color: var(--title-color, #2a1721); 
+            font-size: 2.8rem; 
+            font-weight: 800; 
+            transition: color 0.5s ease, letter-spacing 0.5s ease;
+        }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 30px; }
+        nav a { text-decoration: none; color: var(--accent-color, #d65a8a); font-weight: 600; font-size: 1.1rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent-hover, #bf4776); }
+        nav a[aria-current="page"] { color: var(--text-color, #3b2631); border-bottom: 3px solid var(--accent-color, #d65a8a); padding-bottom: 5px; }
+        
+        main { 
+            background: var(--card-bg, #fff); 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03); 
+        }
+        h2 { color: var(--title-color, #2a1721); margin-top: 0; margin-bottom: 25px; font-weight: 700; }
+        .contact-form {
+            display: grid;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+        .form-field {
+            display: grid;
+            gap: 8px;
+        }
+        .form-field label {
+            color: var(--title-color, #2a1721);
+            font-weight: 700;
+        }
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid var(--item-hover, #f8d7e8);
+            border-radius: 12px;
+            background: var(--item-bg, #fdeff6);
+            color: var(--text-color, #3b2631);
+            font: inherit;
+            padding: 13px 16px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-field textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+        .form-field input:focus,
+        .form-field textarea:focus {
+            border-color: var(--accent-color, #d65a8a);
+            box-shadow: 0 0 0 4px rgba(214, 90, 138, 0.14);
+        }
+        .submit-button {
+            width: 100%;
+            border: none;
+            border-radius: 12px;
+            background: var(--accent-color, #d65a8a);
+            color: #fff;
+            cursor: pointer;
+            font: inherit;
+            font-weight: 700;
+            padding: 14px 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .submit-button:hover {
+            background: var(--accent-hover, #bf4776);
+            transform: translateY(-1px);
+        }
+        .contact-subtitle {
+            color: var(--muted-color, #8b6072);
+            margin: -12px 0 24px 0;
+        }
+        .contact-list { list-style: none; padding: 0; margin: 0; }
+        .contact-item { 
+            padding: 15px 0; 
+            border-bottom: 1px solid var(--item-hover, #eee); 
+            display: flex; 
+            align-items: center; 
+        }
+        .contact-item:last-child { border-bottom: none; }
+        .contact-label { font-weight: 700; width: 150px; color: var(--muted-color, #8b6072); }
+        .contact-value { color: var(--text-color, #3b2631); }
+        .contact-value a { color: var(--accent-color, #d65a8a); text-decoration: none; font-weight: 600; }
+        .contact-value a:hover { text-decoration: underline; }
+        .form-feedback {
+            margin-top: 20px;
+            padding: 16px 18px;
+            border-radius: 14px;
+            font-weight: 600;
+            display: none;
+        }
+        .form-feedback.success {
+            background: #dff3e0;
+            color: #0f5f2f;
+            border: 1px solid #9ad8a3;
+        }
+        .form-feedback.error {
+            background: #ffe5e5;
+            color: #7a1d1d;
+            border: 1px solid #f19e9e;
+        }
+        footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Зв'язок зі мною</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="portfolio.html">Портфоліо</a></li>
+                <li><a href="events.html">Події</a></li>
+                <li><a href="contacts.html" aria-current="page">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Написати повідомлення</h2>
+        <p class="contact-subtitle">Заповніть форму, і повідомлення буде надіслано на мою електронну пошту.</p>
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/alina.siruk26@gmail.com" method="POST" accept-charset="UTF-8">
+            <input type="hidden" name="_subject" value="Нове повідомлення із сайту-портфоліо">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="form-field">
+                <label for="contact-name">Ваше ім'я</label>
+                <input id="contact-name" type="text" name="name" placeholder="Введіть ваше ім'я" required>
+            </div>
+
+            <div class="form-field">
+                <label for="contact-email">Email</label>
+                <input id="contact-email" type="email" name="email" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="form-field">
+                <label for="contact-message">Повідомлення</label>
+                <textarea id="contact-message" name="message" placeholder="Як я можу вам допомогти?" required></textarea>
+            </div>
+
+            <button class="submit-button" type="submit">Надіслати повідомлення</button>
+        </form>
+        <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+
+        <h2>Контактна інформація</h2>
+        <ul class="contact-list">
+            <li class="contact-item">
+                <span class="contact-label">Email:</span>
+                <span class="contact-value"><a href="mailto:alina.siruk26@gmail.com">alina.siruk26@gmail.com</a></span>
+            </li>
+            <li class="contact-item">
+                <span class="contact-label">Telegram:</span>
+                <span class="contact-value"><a href="https://t.me/sirukkkkk" target="_blank">@sirukkkkk</a></span>
+            </li>
+            <li class="contact-item">
+                <span class="contact-label">Локація:</span>
+                <span class="contact-value">м. Кам'янець-Подільський, Україна</span>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

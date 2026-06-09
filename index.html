@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сірук Аліна - Головна сторінка</title>
+    <meta name="description" content="Персональний сайт-портфоліо Сірук Аліни: професійний профіль, навички, навчальні проєкти, події та контакти.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="Сірук Аліна">
+    <meta property="og:title" content="Сірук Аліна - персональний сайт-портфоліо">
+    <meta property="og:description" content="Персональний сайт-портфоліо Сірук Аліни: професійний профіль, навички, навчальні проєкти, події та контакти.">
+    <meta property="og:image" content="alina.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1063">
+    <meta property="og:image:height" content="1280">
+    <meta property="og:image:alt" content="Фото Сірук Аліни">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Сірук Аліна - персональний сайт-портфоліо">
+    <meta name="twitter:description" content="Персональний сайт-портфоліо Сірук Аліни: професійний профіль, навички, навчальні проєкти, події та контакти.">
+    <meta name="twitter:image" content="alina.jpg">
+    <meta name="twitter:image:alt" content="Фото Сірук Аліни">
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-color, #3b2631); 
+            max-width: 950px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: var(--bg-color, #fff7fb); 
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header { 
+            background: var(--card-bg, #fff); 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            margin-bottom: 30px; 
+            text-align: center; 
+            position: relative; 
+        }
+        header h1 { 
+            margin: 0 0 15px 0; 
+            color: var(--title-color, #2a1721); 
+            font-size: 2.8rem; 
+            font-weight: 800; 
+            transition: color 0.5s ease, letter-spacing 0.5s ease;
+        }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 30px; }
+        nav a { text-decoration: none; color: var(--accent-color, #d65a8a); font-weight: 600; font-size: 1.1rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent-hover, #bf4776); }
+        nav a[aria-current="page"] { color: var(--text-color, #3b2631); border-bottom: 3px solid var(--accent-color, #d65a8a); padding-bottom: 5px; }
+        
+        .controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            align-items: center; /* Вирівнюємо олівець, тему та кнопку збереження в один ряд */
+        }
+        .btn {
+            background: var(--accent-color, #d65a8a);
+            color: #fff;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 8px; 
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn:hover { background: var(--accent-hover, #bf4776); }
+
+        .btn-save {
+            background: var(--success-color, #e48aac);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            height: 42px; /* Така ж висота, як і в інших кнопок вгорі */
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            white-space: nowrap; /* Запобігає переносу тексту */
+        }
+        .btn-save:hover { background: var(--accent-hover, #bf4776); }
+        .btn-save:disabled { background: #b2bec3; cursor: not-allowed; }
+        
+        main { display: grid; gap: 30px; }
+        section { 
+            background: var(--card-bg, #fff); 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03); 
+        }
+        #user-name { color: var(--title-color, #2a1721); border-left: 6px solid var(--accent-color, #d65a8a); padding-left: 15px; margin-top: 0; font-weight: 700; }
+        h3 { color: var(--title-color, #2a1721); border-left: 6px solid var(--accent-color, #d65a8a); padding-left: 15px; margin-top: 0; font-weight: 700; }
+        .about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: center; }
+        .profile-pic { width: 100%; height: auto; display: block; border-radius: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        
+        .server-data-box {
+            background: var(--item-bg, #fdeff6);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+        .server-data-box p { margin: 6px 0; }
+
+        .discipline-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
+        .discipline-item { 
+            background: var(--item-bg, #fdeff6); 
+            padding: 18px; 
+            border-radius: 12px; 
+            font-weight: 500; 
+            display: flex; 
+            align-items: center;
+            transition: 0.3s;
+            color: var(--text-color, #3b2631);
+        }
+        .discipline-item:hover { background: var(--item-hover, #f8d7e8); transform: translateY(-2px); }
+        .discipline-item::before { content: "●"; color: var(--accent-color, #d65a8a); margin-right: 12px; font-size: 0.8rem; }
+        
+        .notification-toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success-color, #e48aac);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: none;
+            z-index: 1000;
+        }
+        footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="controls">
+            <button class="btn" id="theme-toggle" title="Змінити тему">◐</button>
+            <button class="btn" id="name-toggle" title="Редагувати профіль">✎</button>
+            <button id="save-btn" class="btn-save">Зберегти зміни</button> <!-- Кнопка перенесена сюди -->
+        </div>
+
+        <h1 class="main-title" id="main-title-name">Завантаження...</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Головна</a></li>
+                <li><a href="portfolio.html">Портфоліо</a></li>
+                <li><a href="events.html">Події</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-grid">
+            <img src="alina.jpg" alt="Фото Сірук Аліни" class="profile-pic" width="1063" height="1280" fetchpriority="high">
+            <div>
+                <h2 id="user-name">Професійний профіль</h2>
+                
+                <div class="server-data-box">
+                    <p><strong>Email:</strong> <span id="user-email">...</span></p>
+                    <p><strong>Місто:</strong> <span id="user-city">...</span></p>
+                    <p><strong>Поточна тема (у DOM):</strong> <span id="user-theme">light</span></p>
+                </div>
+
+                <p>Я студентка 3-го курсу фізико-математичного факультету К-ПНУ імені Івана Огієнка. Навчаюся за спеціальністю <strong>"Комп'ютерні науки та інформаційні технології"</strong>.</p>
+                <p>Моя підготовка базується на фундаментальних знаннях ІТ-індустрії. Я працюю над рішеннями від аналізу даних до розробки сучасних інтерфейсів для веб- та мобільних платформ.</p>
+                <p>Особливу увагу приділяю продуктивності та безпеці веб-ресурсів, досліджуючи протоколи <strong>HTTP/3</strong> та методи шифрування <strong>HTTPS</strong>.</p>
+            </div>
+        </section>
+        <section>
+            <h3>Професійні компетенції</h3>
+            <div class="discipline-grid">
+                <div class="discipline-item">Веб-дизайн та розробка веб-технологій</div>
+                <div class="discipline-item">Інтелектуальний аналіз та обробка даних</div>
+                <div class="discipline-item">Математичне моделювання систем</div>
+                <div class="discipline-item">Проєктування інформаційних систем</div>
+                <div class="discipline-item">Розробка графічних інтерфейсів</div>
+                <div class="discipline-item">Автоматизація в Google Workspace</div>
+                <div class="discipline-item">Створення гібридних мобільних додатків</div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="toast" class="notification-toast">Дані успішно збережено!</div>
+
+    <footer>
+        <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

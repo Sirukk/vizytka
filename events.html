@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Події - Сірук Аліна</title>
+    <meta name="description" content="Події та активності Сірук Аліни: участь у хакатонах, захист навчальних проєктів і науково-практичні конференції.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:site_name" content="Сірук Аліна">
+    <meta property="og:title" content="Події - Сірук Аліна">
+    <meta property="og:description" content="Події та активності Сірук Аліни: участь у хакатонах, захист навчальних проєктів і науково-практичні конференції.">
+    <meta property="og:image" content="alina.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1063">
+    <meta property="og:image:height" content="1280">
+    <meta property="og:image:alt" content="Фото Сірук Аліни">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Події - Сірук Аліна">
+    <meta name="twitter:description" content="Події та активності Сірук Аліни: участь у хакатонах, захист навчальних проєктів і науково-практичні конференції.">
+    <meta name="twitter:image" content="alina.jpg">
+    <meta name="twitter:image:alt" content="Фото Сірук Аліни">
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-color, #3b2631); 
+            max-width: 950px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: var(--bg-color, #fff7fb); 
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header { 
+            background: var(--card-bg, #fff); 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            margin-bottom: 30px; 
+            text-align: center; 
+        }
+        header h1 { 
+            margin: 0 0 15px 0; 
+            color: var(--title-color, #2a1721); 
+            font-size: 2.8rem; 
+            font-weight: 800; 
+            transition: color 0.5s ease;
+        }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 30px; }
+        nav a { text-decoration: none; color: var(--accent-color, #d65a8a); font-weight: 600; font-size: 1.1rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent-hover, #bf4776); }
+        nav a[aria-current="page"] { color: var(--text-color, #3b2631); border-bottom: 3px solid var(--accent-color, #d65a8a); padding-bottom: 5px; }
+        
+        main { display: grid; gap: 30px; }
+        
+        .events-section {
+            background: var(--card-bg, #fff); 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03); 
+        }
+        h2 { color: var(--title-color, #2a1721); margin-top: 0; margin-bottom: 25px; font-weight: 700; border-left: 6px solid var(--accent-color, #d65a8a); padding-left: 15px; }
+        
+        .events-list { display: grid; gap: 20px; }
+        .event-card {
+            background: var(--item-bg, #fdeff6);
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+            border-left: 5px solid var(--accent-color, #d65a8a);
+        }
+        .event-card:hover { 
+            background: var(--item-hover, #f8d7e8); 
+            transform: translateY(-2px); 
+        }
+        .event-date {
+            font-weight: 700;
+            color: var(--accent-color, #d65a8a);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .event-title {
+            font-size: 1.3rem;
+            color: var(--title-color, #2a1721);
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        .event-desc {
+            margin: 0;
+            color: var(--text-color, #3b2631);
+        }
+
+        footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Важливі події</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="portfolio.html">Портфоліо</a></li>
+                <li><a href="events.html" aria-current="page">Події</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="events-section">
+            <h2>Останні та майбутні заходи</h2>
+            <div class="events-list">
+                
+                <div class="event-card">
+                    <span class="event-date">Жовтень 2025</span>
+                    <h3 class="event-title">Участь у хакатоні "IT-Kamianets"</h3>
+                    <p class="event-desc">Командна розробка та презентація інтерактивної вебплатформи для проходження логічних і технічних квестів.</p>
+                </div>
+                
+                <div class="event-card">
+                    <span class="event-date">Грудень 2025</span>
+                    <h3 class="event-title">Захист курсового проєкту з GUI</h3>
+                    <p class="event-desc">Успішна презентація та захист десктопного додатку з автоматизованого розрахунку та нарахування заробітної плати.</p>
+                </div>
+                
+                <div class="event-card">
+                    <span class="event-date">Травень 2026</span>
+                    <h3 class="event-title">Науково-практична конференція К-ПНУ</h3>
+                    <p class="event-desc">Виступ із доповіддю на тему математичного моделювання складних інформаційних систем засобами пакету MATLAB.</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
