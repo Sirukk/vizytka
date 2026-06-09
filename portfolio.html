@@ -99,7 +99,10 @@
         }
         article:hover { transform: translateY(-5px); }
         article h2 { margin-top: 0; color: var(--title-color, #2a1721); font-weight: 700; border-bottom: 1px solid var(--item-hover, #f8d7e8); padding-bottom: 10px; }
-        img { width: 100%; max-width: 640px; display: block; margin: 20px auto; border-radius: 15px; border: 1px solid var(--item-hover, #eee); }
+        /* Portfolio images: side-by-side layout with text */
+        .portfolio-item { display: flex; gap: 24px; align-items: flex-start; }
+        .portfolio-item img { width: 280px; max-width: 35%; display: block; margin: 0; border-radius: 15px; border: 1px solid var(--item-hover, #eee); }
+        .portfolio-text { flex: 1; }
         footer { text-align: center; padding: 40px; color: var(--muted-color, #8b6072); font-size: 0.95rem; }
 
         @media (max-width: 760px) {
@@ -134,18 +137,30 @@
     <main>
         <article>
             <h2>Проєкт в "IT-Kamianets"</h2>
-            <img src="voltlab_screen.png" alt="Скріншот проєкту VoltLab" width="1280" height="622" loading="lazy">
-            <p>Розробка інтерактивної платформи для проходження <strong>технічних та логічних квестів</strong>. В межах проєкту реалізовано систему поетапних завдань, ігрову логіку та зручний інтерфейс користувача на базі фреймворку Angular.</p>
+            <div class="portfolio-item">
+                <img src="voltlab_screen.png" alt="Скріншот проєкту VoltLab" loading="lazy">
+                <div class="portfolio-text">
+                    <p>Розробка інтерактивної платформи для проходження <strong>технічних та логічних квестів</strong>. В межах проєкту реалізовано систему поетапних завдань, ігрову логіку та зручний інтерфейс користувача на базі фреймворку Angular.</p>
+                </div>
+            </div>
         </article>
         <article>
             <h2>Розробка графічних інтерфейсів (GUI)</h2>
-            <img src="gui_project.png" alt="Інтерфейс програми нарахування заробітної плати" width="919" height="537" loading="lazy">
-            <p>Проєткування та реалізація десктопного інтерфейсу для автоматизації розрахунків. Проєкт демонструє роботу з табличними формами та логікою обробки подій у реальному часі.</p>
+            <div class="portfolio-item">
+                <img src="gui_project.png" alt="Інтерфейс програми нарахування заробітної плати" loading="lazy">
+                <div class="portfolio-text">
+                    <p>Проєткування та реалізація десктопного інтерфейсу для автоматизації розрахунків. Проєкт демонструє роботу з табличними формами та логікою обробки подій у реальному часі.</p>
+                </div>
+            </div>
         </article>
         <article>
             <h2>Системне моделювання в MATLAB</h2>
-            <img src="matlab_graph.png" alt="Графік моделювання в MATLAB" width="1280" height="684" loading="lazy">
-            <p>Побудова математичних моделей складних систем та інтелектуальний аналіз даних для візуалізації результатів обчислень.</p>
+            <div class="portfolio-item">
+                <img src="matlab_graph.png" alt="Графік моделювання в MATLAB" loading="lazy">
+                <div class="portfolio-text">
+                    <p>Побудова математичних моделей складних систем та інтелектуальний аналіз даних для візуалізації результатів обчислень.</p>
+                </div>
+            </div>
         </article>
     </main>
     <footer>
