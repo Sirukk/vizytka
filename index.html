@@ -182,16 +182,17 @@
 <body>
     <header>
         <div class="controls">
-            <button class="btn" id="theme-toggle" title="Змінити тему">◐</button>
+            <button class="btn" id="theme-toggle" data-i18n-title="themeToggleTitle" title="Змінити тему">◐</button>
+            <button class="btn" id="lang-toggle" data-i18n="langToggleLabel" data-i18n-title="langToggleTitle" title="Переключити мову">EN</button>
         </div>
 
         <h1 class="main-title" id="main-title-name">Завантаження...</h1>
         <nav role="navigation">
             <ul>
-                <li><a href="index.html" aria-current="page">Головна</a></li>
-                <li><a href="portfolio.html">Портфоліо</a></li>
-                <li><a href="events.html">Події</a></li>
-                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="index.html" aria-current="page" data-i18n="navHome">Головна</a></li>
+                <li><a href="portfolio.html" data-i18n="navPortfolio">Портфоліо</a></li>
+                <li><a href="events.html" data-i18n="navEvents">Події</a></li>
+                <li><a href="contacts.html" data-i18n="navContacts">Контакти</a></li>
             </ul>
         </nav>
     </header>
@@ -199,29 +200,23 @@
         <section class="about-grid">
             <img src="alina.jpg" alt="Фото Сірук Аліни" class="profile-pic" width="1063" height="1280" fetchpriority="high">
             <div>
-                <h2 id="user-name">Професійний профіль</h2>
-                
-                <div class="server-data-box">
-                    <p><strong>Email:</strong> <span id="user-email">...</span></p>
-                    <p><strong>Місто:</strong> <span id="user-city">...</span></p>
-                    <p><strong>Поточна тема (у DOM):</strong> <span id="user-theme">light</span></p>
-                </div>
+                <h2 id="user-name" data-i18n="userProfileTitle">Професійний профіль</h2>
 
-                <p>Я студентка 3-го курсу фізико-математичного факультету К-ПНУ імені Івана Огієнка. Навчаюся за спеціальністю <strong>"Комп'ютерні науки та інформаційні технології"</strong>.</p>
-                <p>Моя підготовка базується на фундаментальних знаннях ІТ-індустрії. Я працюю над рішеннями від аналізу даних до розробки сучасних інтерфейсів для веб- та мобільних платформ.</p>
-                <p>Особливу увагу приділяю продуктивності та безпеці веб-ресурсів, досліджуючи протоколи <strong>HTTP/3</strong> та методи шифрування <strong>HTTPS</strong>.</p>
+                <p data-i18n="aboutText1">Я студентка 3-го курсу фізико-математичного факультету К-ПНУ імені Івана Огієнка. Навчаюся за спеціальністю <strong>"Комп'ютерні науки та інформаційні технології"</strong>.</p>
+                <p data-i18n="aboutText2">Моя підготовка базується на фундаментальних знаннях ІТ-індустрії. Я працюю над рішеннями від аналізу даних до розробки сучасних інтерфейсів для веб- та мобільних платформ.</p>
+                <p data-i18n="aboutText3">Особливу увагу приділяю продуктивності та безпеці веб-ресурсів, досліджуючи протоколи <strong>HTTP/3</strong> та методи шифрування <strong>HTTPS</strong>.</p>
             </div>
         </section>
         <section>
-            <h3>Професійні компетенції</h3>
+            <h3 data-i18n="skillsTitle">Професійні компетенції</h3>
             <div class="discipline-grid">
-                <div class="discipline-item">Веб-дизайн та розробка веб-технологій</div>
-                <div class="discipline-item">Інтелектуальний аналіз та обробка даних</div>
-                <div class="discipline-item">Математичне моделювання систем</div>
-                <div class="discipline-item">Проєктування інформаційних систем</div>
-                <div class="discipline-item">Розробка графічних інтерфейсів</div>
-                <div class="discipline-item">Автоматизація в Google Workspace</div>
-                <div class="discipline-item">Створення гібридних мобільних додатків</div>
+                <div class="discipline-item" data-i18n="skill1">Веб-дизайн та розробка веб-технологій</div>
+                <div class="discipline-item" data-i18n="skill2">Інтелектуальний аналіз та обробка даних</div>
+                <div class="discipline-item" data-i18n="skill3">Математичне моделювання систем</div>
+                <div class="discipline-item" data-i18n="skill4">Проєктування інформаційних систем</div>
+                <div class="discipline-item" data-i18n="skill5">Розробка графічних інтерфейсів</div>
+                <div class="discipline-item" data-i18n="skill6">Автоматизація в Google Workspace</div>
+                <div class="discipline-item" data-i18n="skill7">Створення гібридних мобільних додатків</div>
             </div>
         </section>
     </main>
@@ -229,7 +224,7 @@
     <div id="toast" class="notification-toast">Дані успішно збережено!</div>
 
     <footer>
-        <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
+        <address data-i18n="footerCredit">Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
     </footer>
 
     <script src="script.js"></script>

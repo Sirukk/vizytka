@@ -201,21 +201,22 @@
 <body>
     <header>
         <div class="controls">
-            <button class="btn" id="theme-toggle" title="Змінити тему">◐</button>
+            <button class="btn" id="theme-toggle" data-i18n-title="themeToggleTitle" title="Змінити тему">◐</button>
+            <button class="btn" id="lang-toggle" data-i18n="langToggleLabel" data-i18n-title="langToggleTitle" title="Переключити мову">EN</button>
         </div>
-        <h1 class="main-title">Зв'язок зі мною</h1>
+        <h1 class="main-title" data-i18n="contactsPageTitle">Зв'язок зі мною</h1>
         <nav role="navigation">
             <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="portfolio.html">Портфоліо</a></li>
-                <li><a href="events.html">Події</a></li>
-                <li><a href="contacts.html" aria-current="page">Контакти</a></li>
+                <li><a href="index.html" data-i18n="navHome">Головна</a></li>
+                <li><a href="portfolio.html" data-i18n="navPortfolio">Портфоліо</a></li>
+                <li><a href="events.html" data-i18n="navEvents">Події</a></li>
+                <li><a href="contacts.html" aria-current="page" data-i18n="navContacts">Контакти</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Написати повідомлення</h2>
-        <p class="contact-subtitle">Заповніть форму, і повідомлення буде надіслано на мою електронну пошту.</p>
+        <h2 data-i18n="contactFormTitle">Написати повідомлення</h2>
+        <p class="contact-subtitle" data-i18n="contactSubtitle">Заповніть форму, і повідомлення буде надіслано на мою електронну пошту.</p>
         <form id="contact-form" class="contact-form" action="https://formsubmit.co/alina.siruk26@gmail.com" method="POST" accept-charset="UTF-8">
             <input type="hidden" name="_subject" value="Нове повідомлення із сайту-портфоліо">
             <input type="hidden" name="_template" value="table">
@@ -223,46 +224,46 @@
             <input type="text" name="_honey" style="display:none">
 
             <div class="form-field">
-                <label for="contact-name">Ваше ім'я</label>
-                <input id="contact-name" type="text" name="name" placeholder="Введіть ваше ім'я" required>
+                <label for="contact-name" data-i18n="contactNameLabel">Ваше ім'я</label>
+                <input id="contact-name" type="text" name="name" data-i18n-placeholder="contactNamePlaceholder" placeholder="Введіть ваше ім'я" required>
             </div>
 
             <div class="form-field">
-                <label for="contact-email">Email</label>
-                <input id="contact-email" type="email" name="email" placeholder="example@mail.com" required>
+                <label for="contact-email" data-i18n="contactEmailLabel">Email</label>
+                <input id="contact-email" type="email" name="email" data-i18n-placeholder="contactEmailPlaceholder" placeholder="example@mail.com" required>
             </div>
 
             <div class="form-field">
-                <label for="contact-message">Повідомлення</label>
-                <textarea id="contact-message" name="message" placeholder="Як я можу вам допомогти?" required></textarea>
+                <label for="contact-message" data-i18n="contactMessageLabel">Повідомлення</label>
+                <textarea id="contact-message" name="message" data-i18n-placeholder="contactMessagePlaceholder" placeholder="Як я можу вам допомогти?" required></textarea>
             </div>
 
-            <button class="submit-button" type="submit">Надіслати повідомлення</button>
+            <button class="submit-button" type="submit" data-i18n="contactSubmit">Надіслати повідомлення</button>
         </form>
         <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
 
-        <h2>Контактна інформація</h2>
+        <h2 data-i18n="contactSectionTitle">Контактна інформація</h2>
         <ul class="contact-list">
             <li class="contact-item">
-                <span class="contact-label">Email:</span>
+                <span class="contact-label" data-i18n="contactEmailLabelShort">Email:</span>
                 <span class="contact-value"><a href="mailto:alina.siruk26@gmail.com">alina.siruk26@gmail.com</a></span>
             </li>
             <li class="contact-item">
-                <span class="contact-label">Telegram:</span>
+                <span class="contact-label" data-i18n="contactTelegramLabel">Telegram:</span>
                 <span class="contact-value"><a href="https://t.me/sirukkkkk" target="_blank">@sirukkkkk</a></span>
             </li>
             <li class="contact-item">
-                <span class="contact-label">Instagram:</span>
+                <span class="contact-label" data-i18n="contactInstagramLabel">Instagram:</span>
                 <span class="contact-value"><a href="https://instagram.com/Sirukkkkk" target="_blank">@Sirukkkkk</a></span>
             </li>
             <li class="contact-item">
-                <span class="contact-label">Локація:</span>
-                <span class="contact-value">м. Кам'янець-Подільський, Україна</span>
+                <span class="contact-label" data-i18n="contactLocationLabel">Локація:</span>
+                <span class="contact-value" data-i18n="contactLocationValue">м. Кам'янець-Подільський, Україна</span>
             </li>
         </ul>
     </main>
     <footer>
-        <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
+        <address data-i18n="footerCredit">Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
     </footer>
 
     <script src="script.js"></script>

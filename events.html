@@ -149,40 +149,41 @@
 <body>
     <header>
         <div class="controls">
-            <button class="btn" id="theme-toggle" title="Змінити тему">◐</button>
+            <button class="btn" id="theme-toggle" data-i18n-title="themeToggleTitle" title="Змінити тему">◐</button>
+            <button class="btn" id="lang-toggle" data-i18n="langToggleLabel" data-i18n-title="langToggleTitle" title="Переключити мову">EN</button>
         </div>
-        <h1 class="main-title">Важливі події</h1>
+        <h1 class="main-title" data-i18n="eventsPageTitle">Важливі події</h1>
         <nav role="navigation">
             <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="portfolio.html">Портфоліо</a></li>
-                <li><a href="events.html" aria-current="page">Події</a></li>
-                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="index.html" data-i18n="navHome">Головна</a></li>
+                <li><a href="portfolio.html" data-i18n="navPortfolio">Портфоліо</a></li>
+                <li><a href="events.html" aria-current="page" data-i18n="navEvents">Події</a></li>
+                <li><a href="contacts.html" data-i18n="navContacts">Контакти</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
         <section class="events-section">
-            <h2>Останні та майбутні заходи</h2>
+            <h2 data-i18n="eventSectionHeading">Останні та майбутні заходи</h2>
             <div class="events-list">
                 
                 <div class="event-card">
                     <span class="event-date">Жовтень 2025</span>
-                    <h3 class="event-title">Участь у хакатоні "IT-Kamianets"</h3>
-                    <p class="event-desc">Командна розробка та презентація інтерактивної вебплатформи для проходження логічних і технічних квестів.</p>
+                    <h3 class="event-title" data-i18n="eventTitle1">Участь у хакатоні "IT-Kamianets"</h3>
+                    <p class="event-desc" data-i18n="eventDesc1">Командна розробка та презентація інтерактивної вебплатформи для проходження логічних і технічних квестів.</p>
                 </div>
                 
                 <div class="event-card">
                     <span class="event-date">Грудень 2025</span>
-                    <h3 class="event-title">Захист курсового проєкту з GUI</h3>
-                    <p class="event-desc">Успішна презентація та захист десктопного додатку з автоматизованого розрахунку та нарахування заробітної плати.</p>
+                    <h3 class="event-title" data-i18n="eventTitle2">Захист курсового проєкту з GUI</h3>
+                    <p class="event-desc" data-i18n="eventDesc2">Успішна презентація та захист десктопного додатку з автоматизованого розрахунку та нарахування заробітної плати.</p>
                 </div>
                 
                 <div class="event-card">
                     <span class="event-date">Травень 2026</span>
-                    <h3 class="event-title">Науково-практична конференція К-ПНУ</h3>
-                    <p class="event-desc">Виступ із доповіддю на тему математичного моделювання складних інформаційних систем засобами пакету MATLAB.</p>
+                    <h3 class="event-title" data-i18n="eventTitle3">Науково-практична конференція К-ПНУ</h3>
+                    <p class="event-desc" data-i18n="eventDesc3">Виступ із доповіддю на тему математичного моделювання складних інформаційних систем засобами пакету MATLAB.</p>
                 </div>
                 
             </div>
@@ -190,7 +191,7 @@
     </main>
 
     <footer>
-        <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
+        <address data-i18n="footerCredit">Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
     </footer>
 
     <script src="script.js"></script>

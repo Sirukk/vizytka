@@ -99,10 +99,10 @@
         }
         article:hover { transform: translateY(-5px); }
         article h2 { margin-top: 0; color: var(--title-color, #2a1721); font-weight: 700; border-bottom: 1px solid var(--item-hover, #f8d7e8); padding-bottom: 10px; }
-        /* Portfolio images: side-by-side layout with text */
-        .portfolio-item { display: flex; gap: 24px; align-items: flex-start; }
-        .portfolio-item img { width: 280px; max-width: 35%; display: block; margin: 0; border-radius: 15px; border: 1px solid var(--item-hover, #eee); }
-        .portfolio-text { flex: 1; }
+        /* Portfolio images: image on top, text below */
+        .portfolio-item { display: flex; flex-direction: column; gap: 24px; }
+        .portfolio-item img { width: 100%; max-width: 100%; display: block; margin: 0; border-radius: 15px; border: 1px solid var(--item-hover, #eee); }
+        .portfolio-text { flex: unset; }
         .portfolio-link { display: block; color: inherit; text-decoration: none; cursor: pointer; touch-action: manipulation; }
         .portfolio-item:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.08); transform: translateY(-2px); transition: .18s ease; }
 
@@ -141,48 +141,49 @@
 <body>
     <header>
         <div class="controls">
-            <button class="btn" id="theme-toggle" title="Змінити тему">◐</button>
+            <button class="btn" id="theme-toggle" data-i18n-title="themeToggleTitle" title="Змінити тему">◐</button>
+            <button class="btn" id="lang-toggle" data-i18n="langToggleLabel" data-i18n-title="langToggleTitle" title="Переключити мову">EN</button>
         </div>
-        <h1 class="main-title">Проєкти та досягнення</h1>
+        <h1 class="main-title" data-i18n="portfolioPageTitle">Проєкти та досягнення</h1>
         <nav role="navigation">
             <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="portfolio.html" aria-current="page">Портфоліо</a></li>
-                <li><a href="events.html">Події</a></li>
-                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="index.html" data-i18n="navHome">Головна</a></li>
+                <li><a href="portfolio.html" aria-current="page" data-i18n="navPortfolio">Портфоліо</a></li>
+                <li><a href="events.html" data-i18n="navEvents">Події</a></li>
+                <li><a href="contacts.html" data-i18n="navContacts">Контакти</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <article>
-            <h2>Вебсайт готелю «Садиба»</h2>
-            <a href="#" class="portfolio-link" data-title="Вебсайт готелю «Садиба»" data-image="sadyba1.jpg" data-gallery="sadyba1.jpg,sadyba2.jpg,sadyba3.jpg,sadyba4.jpg" data-desc="Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом.">
+            <h2 data-i18n="projectTitleSadiba">Вебсайт готелю «Садиба»</h2>
+            <a href="#" class="portfolio-link" data-title="Вебсайт готелю «Садиба»" data-title-en="Hotel “Sadiba” website" data-image="sadyba1.jpg" data-gallery="sadyba1.jpg,sadyba2.jpg,sadyba3.jpg,sadyba4.jpg" data-desc="Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом." data-desc-en="A web project created to showcase the “Sadiba” hotel online. The website provides guests with information about accommodation, amenities, and contact details. The design includes a modern layout, easy navigation, and responsive behavior for multiple devices. HTML, CSS and JavaScript were used to ensure fast performance and a smooth user experience.">
                 <div class="portfolio-item">
                     <img src="sadyba1.jpg" alt="Фото готелю Садиба" loading="lazy">
                     <div class="portfolio-text">
-                        <p>Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом.</p>
+                        <p data-i18n="projectDescSadiba">Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом.</p>
                     </div>
                 </div>
             </a>
         </article>
         <article>
-            <h2>Розробка графічних інтерфейсів (GUI)</h2>
-            <a href="#" class="portfolio-link" data-title="GUI проект" data-image="gui_project.png" data-desc="Проєкт GUI для автоматизації нарахувань, робота з табличними формами та подіями в реальному часі.">
+            <h2 data-i18n="projectTitleGUI">Розробка графічних інтерфейсів (GUI)</h2>
+            <a href="#" class="portfolio-link" data-title="GUI проект" data-title-en="Graphical User Interface (GUI) Development" data-image="gui_project.png" data-desc="Проєкт GUI для автоматизації нарахувань, робота з табличними формами та подіями в реальному часі." data-desc-en="A GUI project designed for payroll automation, with table forms and real-time event handling.">
                 <div class="portfolio-item">
                     <img src="gui_project.png" alt="Інтерфейс програми нарахування заробітної плати" loading="lazy">
                     <div class="portfolio-text">
-                        <p>Проєткування та реалізація десктопного інтерфейсу для автоматизації розрахунків. Проєкт демонструє роботу з табличними формами та логікою обробки подій у реальному часі.</p>
+                        <p data-i18n="projectDescGUI">Проєткування та реалізація десктопного інтерфейсу для автоматизації розрахунків. Проєкт демонструє роботу з табличними формами та логікою обробки подій у реальному часі.</p>
                     </div>
                 </div>
             </a>
         </article>
         <article>
-            <h2>Системне моделювання в MATLAB</h2>
-            <a href="#" class="portfolio-link" data-title="Моделювання в MATLAB" data-image="matlab_graph.png" data-desc="Моделювання систем та аналіз даних у MATLAB з візуалізацією результатів.">
+            <h2 data-i18n="projectTitleMatlab">Системне моделювання в MATLAB</h2>
+            <a href="#" class="portfolio-link" data-title="Моделювання в MATLAB" data-title-en="System Modeling in MATLAB" data-image="matlab_graph.png" data-desc="Моделювання систем та аналіз даних у MATLAB з візуалізацією результатів." data-desc-en="Modeling systems and analyzing data in MATLAB with visualization of the results.">
                 <div class="portfolio-item">
                     <img src="matlab_graph.png" alt="Графік моделювання в MATLAB" loading="lazy">
                     <div class="portfolio-text">
-                        <p>Побудова математичних моделей складних систем та інтелектуальний аналіз даних для візуалізації результатів обчислень.</p>
+                        <p data-i18n="projectDescMatlab">Побудова математичних моделей складних систем та інтелектуальний аналіз даних для візуалізації результатів обчислень.</p>
                     </div>
                 </div>
             </a>
@@ -191,7 +192,7 @@
         <!-- Modal for portfolio details -->
         <div id="portfolio-modal" class="modal" aria-hidden="true">
             <div class="modal-content" role="dialog" aria-modal="true">
-                <button id="modal-close" class="modal-close">Закрити</button>
+                <button id="modal-close" class="modal-close" data-i18n="modalCloseBtn">Закрити</button>
                 <h3 id="modal-title"></h3>
                 <div class="modal-image-wrapper">
                     <button id="gallery-prev" class="gallery-nav" aria-label="Попереднє фото">‹</button>
@@ -204,7 +205,7 @@
             </div>
         </div>
     <footer>
-        <address>Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
+        <address data-i18n="footerCredit">Кам'янець-Подільський національний університет імені Івана Огієнка, 2026</address>
     </footer>
 
     <script src="script.js"></script>
