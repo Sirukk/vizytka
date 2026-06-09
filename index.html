@@ -21,11 +21,16 @@
     <meta name="twitter:image" content="alina.jpg">
     <meta name="twitter:image:alt" content="Фото Сірук Аліни">
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
             line-height: 1.6; 
             color: var(--text-color, #3b2631); 
             max-width: 950px; 
+            width: 100%;
+            min-width: 0;
             margin: 0 auto; 
             padding: 20px; 
             background-color: var(--bg-color, #fff7fb); 
@@ -39,6 +44,7 @@
             margin-bottom: 30px; 
             text-align: center; 
             position: relative; 
+            width: 100%;
         }
         header h1 { 
             margin: 0 0 15px 0; 
@@ -47,7 +53,8 @@
             font-weight: 800; 
             transition: color 0.5s ease, letter-spacing 0.5s ease;
         }
-        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 30px; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        nav li { white-space: nowrap; }
         nav a { text-decoration: none; color: var(--accent-color, #d65a8a); font-weight: 600; font-size: 1.1rem; transition: 0.3s; }
         nav a:hover { color: var(--accent-hover, #bf4776); }
         nav a[aria-current="page"] { color: var(--text-color, #3b2631); border-bottom: 3px solid var(--accent-color, #d65a8a); padding-bottom: 5px; }
