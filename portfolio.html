@@ -103,7 +103,7 @@
         article h2 { margin-top: 0; color: var(--title-color, #2a1721); font-weight: 700; border-bottom: 1px solid var(--item-hover, #f8d7e8); padding-bottom: 10px; }
         /* Portfolio images: image on top, text below */
         .portfolio-item { display: flex; flex-direction: column; gap: 24px; }
-        .portfolio-item img { width: 100%; max-width: 100%; display: block; margin: 0; border-radius: 15px; border: 1px solid var(--item-hover, #eee); }
+        .portfolio-item img { width: 100%; max-width: 100%; height: auto; max-height: 420px; object-fit: contain; display: block; margin: 0; border-radius: 15px; border: 1px solid var(--item-hover, #eee); background: var(--bg-color, #fff); }
         .portfolio-text { flex: unset; }
         .portfolio-card { display: block; color: inherit; text-decoration: none; cursor: default; }
         .portfolio-card:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.08); transform: translateY(-2px); transition: .18s ease; }
@@ -114,8 +114,8 @@
         .modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.6); z-index: 2000; }
         .modal.show { display: flex; }
         .modal-content { background: var(--card-bg, #fff); padding: 18px; border-radius: 12px; max-width: 900px; width: 92%; max-height: 90%; overflow: auto; position: relative; }
-        .modal-content img { max-width: 100%; height: auto; display: block; margin: 8px 0 12px; border-radius: 10px; }
-        .modal-image-wrapper { position: relative; display: grid; place-items: center; }
+        .modal-content img { width: 100%; max-width: 100%; height: auto; display: block; margin: 8px 0 12px; border-radius: 10px; }
+        .modal-image-wrapper { position: relative; display: grid; place-items: center; overflow: hidden; }
         .gallery-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.85); border: 1px solid rgba(0,0,0,0.1); border-radius: 50%; width: 44px; height: 44px; font-size: 2rem; color: #6d4f5b; cursor: pointer; display: flex; align-items: center; justify-content: center; }
         .gallery-nav:hover { background: rgba(255,255,255,1); }
         #gallery-prev { left: 10px; }
@@ -138,6 +138,7 @@
             .btn { padding: 8px 12px; font-size: 0.95rem; }
             main { gap: 20px; }
             article { padding: 25px; }
+            .portfolio-item img { max-height: 220px; }
             footer { padding: 25px 10px; }
         }
     </style>
@@ -159,21 +160,22 @@
         </nav>
     </header>
     <main>
-        <article class="portfolio-card" data-title="Вебсайт готелю «Садиба»" data-title-en="Hotel “Sadiba” website" data-image="sadyba1.jpg" data-gallery="sadyba1.jpg,sadyba2.jpg,sadyba3.jpg,sadyba4.jpg" data-desc="Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом." data-desc-en="A web project created to showcase the “Sadiba” hotel online. The website provides guests with information about accommodation, amenities, and responsive behavior for multiple devices. HTML, CSS and JavaScript were used to ensure fast performance and a smooth user experience.">
-                <div class="portfolio-item">
+        <article id="sadiba" class="portfolio-card" data-title="Вебсайт готелю «Садиба»" data-title-en="Hotel “Sadiba” website" data-image="sadyba1.jpg" data-gallery="sadyba1.jpg,sadyba2.jpg,sadyba3.jpg,sadyba4.jpg" data-desc="Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом." data-desc-en="A web project created to showcase the “Sadiba” hotel online. The website provides guests with information about accommodation, amenities, and responsive behavior for multiple devices. HTML, CSS and JavaScript were used to ensure fast performance and a smooth user experience.">
+            <h2>Розробка вебсайту готелю «Садиба»</h2>
+            <div class="portfolio-item">
                     <img src="sadyba1.jpg" alt="Фото готелю Садиба" loading="lazy">
                     <div class="portfolio-text">
-                        <p data-i18n="projectDescSadiba">Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом.</p>
+                        <p data-i18n="projectDescSadibaSummary">Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет.</p>
                         <button type="button" class="portfolio-open-btn" data-i18n="openGalleryBtn">Відкрити</button>
                     </div>
                 </div>
             </article>
-        <article class="portfolio-card" data-title="GUI проект" data-title-en="Graphical User Interface (GUI) Development" data-image="gui_project.png" data-desc="Проєкт GUI для автоматизації нарахувань, робота з табличними формами та подіями в реальному часі." data-desc-en="A GUI project designed for payroll automation, with table forms and real-time event handling.">
-            <h2 data-i18n="projectTitleGUI">Розробка графічних інтерфейсів (GUI)</h2>
+        <article class="portfolio-card" data-title="Програмний комплекс «SalaryCalculator»" data-title-en="SalaryCalculator Software Suite" data-image="salary1.jpg" data-gallery="salary1.jpg,salary2.jpg,salary3.jpg" data-desc="<p>Десктопний застосунок, розроблений для автоматизації обліку відпрацьованого часу та розрахунку заробітної плати персоналу з погодинною оплатою праці.</p><p>Програма надає користувачам (бухгалтерам, фінансовим відділам та HR-менеджерам) зручний інструмент для швидкого введення даних працівників, миттєвого підрахунку сум до виплати та моніторингу результатів у зведеній інтерактивній таблиці.</p><p>Під час створення проєкту було реалізовано сучасний та інтуїтивно зрозумілий графічний інтерфейс користувача (GUI), інтелектуальну систему скасування та повторення дій (Undo/Redo), превентивну валідацію введених даних у реальному часі та модуль автоматичної генерації та експорту офіційних фінансових звітів у формат MS Word (.docx).</p><p>Для розробки проєкту використано мову програмування C# та технологію Windows Forms (NET Framework), що забезпечило високу швидкість реакції інтерфейсу та надійну роботу системи.</p>" data-desc-en="<p>A desktop application designed to automate time tracking and payroll calculations for hourly staff.</p><p>The program provides users with a quick way to enter employee data, calculate payout amounts instantly, and monitor results in a summary interactive table.</p><p>The project includes a modern intuitive GUI, undo/redo support, live data validation, and automatic MS Word (.docx) report export.</p><p>Built with C# and Windows Forms (NET Framework) to ensure fast interface response and reliable performance.</p>">
+            <h2>Програмний комплекс «SalaryCalculator»</h2>
             <div class="portfolio-item">
-                <img src="gui_project.png" alt="Інтерфейс програми нарахування заробітної плати" loading="lazy">
+                <img src="salary1.jpg" alt="Інтерфейс програми SalaryCalculator" loading="lazy">
                 <div class="portfolio-text">
-                    <p data-i18n="projectDescGUI">Проєткування та реалізація десктопного інтерфейсу для автоматизації розрахунків. Проєкт демонструє роботу з табличними формами та логікою обробки подій у реальному часі.</p>
+                    <p data-i18n="projectDescGUISummary">Десктопний застосунок для обліку відпрацьованого часу та розрахунку заробітної плати персоналу.</p>
                     <button type="button" class="portfolio-open-btn" data-i18n="openGalleryBtn">Відкрити</button>
                 </div>
             </div>
@@ -183,7 +185,7 @@
             <div class="portfolio-item">
                 <img src="matlab_graph.png" alt="Графік моделювання в MATLAB" loading="lazy">
                 <div class="portfolio-text">
-                    <p data-i18n="projectDescMatlab">Побудова математичних моделей складних систем та інтелектуальний аналіз даних для візуалізації результатів обчислень.</p>
+                    <p data-i18n="projectDescMatlabSummary">Моделювання систем та аналіз даних у MATLAB.</p>
                     <button type="button" class="portfolio-open-btn" data-i18n="openGalleryBtn">Відкрити</button>
                 </div>
             </div>

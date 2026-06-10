@@ -40,6 +40,13 @@ const translations = {
         skill5: 'Розробка графічних інтерфейсів',
         skill6: 'Автоматизація в Google Workspace',
         skill7: 'Створення гібридних мобільних додатків',
+        skill1Desc: 'Володію навичками створення сучасних вебсайтів із використанням HTML, CSS та JavaScript. Розробляю адаптивні сторінки, які коректно відображаються на комп’ютерах, планшетах і смартфонах. Працюю над структурою, дизайном та функціональністю вебресурсів, приділяючи увагу зручності користувачів і швидкодії сайту.',
+        skill2Desc: 'Вмію збирати, аналізувати та систематизувати дані для отримання корисної інформації. Працюю з електронними таблицями, статистичними показниками та методами обробки даних. Можу виконувати візуалізацію результатів і формувати звіти для подальшого аналізу.',
+        skill3Desc: 'Застосовую математичні методи для дослідження та аналізу різних процесів і систем. Володію навичками побудови математичних моделей, виконання розрахунків та інтерпретації отриманих результатів. Використовую математичний апарат для розв’язання прикладних задач у сфері інформаційних технологій.',
+        skill4Desc: 'Маю знання з аналізу вимог до інформаційних систем та їхнього проєктування. Вмію створювати структуру системи, моделювати взаємодію між її компонентами та розробляти логічні схеми роботи. Розумію основні принципи побудови ефективних програмних рішень.',
+        skill5Desc: 'Створюю зрозумілі та зручні інтерфейси для веб- і мобільних застосунків. Працюю з прототипуванням, підбором кольорових схем, компонентів та елементів навігації. Використовую сучасні підходи до UI/UX-дизайну для забезпечення комфортної взаємодії користувача з програмним продуктом.',
+        skill6Desc: 'Використовую Google Apps Script для автоматизації роботи з сервісами Google. Створюю сценарії для обробки даних у Google Sheets, автоматичного формування документів і презентацій, а також оптимізації рутинних процесів. Це дозволяє значно підвищити ефективність роботи з інформацією.',
+        skill7: 'Створення гібридних мобільних додатків',
         contactFormTitle: 'Написати повідомлення',
         contactSubtitle: 'Заповніть форму, і повідомлення буде надіслано на мою електронну пошту.',
         contactNameLabel: 'Ваше ім\'я',
@@ -58,18 +65,29 @@ const translations = {
         contactLocationLabel: 'Локація:',
         contactLocationValue: 'м. Кам\'янець-Подільський, Україна',
         projectTitleSadiba: 'Вебсайт готелю «Садиба»',
+        projectDescSadibaSummary: 'Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет.',
         projectDescSadiba: 'Вебпроєкт, розроблений для представлення готелю «Садиба» в мережі Інтернет. Сайт надає відвідувачам інформацію про готель, умови проживання, доступні послуги та контактні дані. Під час створення проєкту було реалізовано сучасний дизайн, зручну навігацію між сторінками та адаптивне відображення для різних пристроїв. Для розробки використано HTML, CSS та JavaScript, що забезпечило швидку роботу сайту та комфортну взаємодію користувачів із контентом.',
         projectTitleGUI: 'Розробка графічних інтерфейсів (GUI)',
+        projectDescGUISummary: 'Проєкт GUI для автоматизації нарахувань.',
         projectDescGUI: 'Проєкт GUI для автоматизації нарахувань, робота з табличними формами та подіями в реальному часі.',
         projectTitleMatlab: 'Системне моделювання в MATLAB',
         projectDescMatlab: 'Моделювання систем та аналіз даних у MATLAB з візуалізацією результатів.',
         eventSectionHeading: 'Останні та майбутні заходи',
+        eventDate1: 'Жовтень 2025',
         eventTitle1: 'Участь у хакатоні "IT-Kamianets"',
         eventDesc1: 'Командна розробка та презентація інтерактивної вебплатформи для проходження логічних і технічних квестів.',
+        eventDetails1: '<p><strong>Детальніше:</strong></p><p>У рамках хакатону я працювала в команді над створенням інтерактивної вебплатформи для проходження логічних та технічних квестів.</p><p>Брала участь у проєктуванні інтерфейсу, розробці функціоналу та тестуванні системи.</p><p>Захід дозволив отримати практичний досвід командної роботи та розробки IT-проєктів у стислі терміни.</p>',
+        eventDate2: 'Грудень 2025',
         eventTitle2: 'Захист курсового проєкту з GUI',
         eventDesc2: 'Успішна презентація та захист десктопного додатку з автоматизованого розрахунку та нарахування заробітної плати.',
+        eventDetails2: '<p><strong>Детальніше:</strong></p><p>Було розроблено десктопний додаток для автоматизації розрахунку заробітної плати з використанням сучасних підходів до створення графічних інтерфейсів користувача.</p><p>Під час захисту було продемонстровано функціональність програми, зручність інтерфейсу та коректність виконання розрахунків.</p>',
+        eventDate3: 'Травень 2026',
         eventTitle3: 'Науково-практична конференція К-ПНУ',
         eventDesc3: 'Виступ із доповіддю на тему математичного моделювання складних інформаційних систем засобами пакету MATLAB.',
+        eventDetails3: '<p><strong>Детальніше:</strong></p><p>На конференції було представлено доповідь, присвячену математичному моделюванню складних інформаційних систем засобами MATLAB.</p><p>Під час виступу було розглянуто методи аналізу даних, побудову математичних моделей та результати проведених досліджень.</p>',
+        detailsBtn: 'Детальніше',
+        detailsCloseBtn: 'Сховати',
+        userName: 'Сірук Аліна',
         footerCredit: 'Кам\'янець-Подільський національний університет імені Івана Огієнка, 2026',
     },
     en: {
@@ -98,6 +116,13 @@ const translations = {
         skill5: 'Graphical user interface development',
         skill6: 'Automation in Google Workspace',
         skill7: 'Hybrid mobile application development',
+        skill1Desc: 'I can create modern websites using HTML, CSS and JavaScript. I build responsive pages that display correctly on desktops, tablets, and smartphones. I focus on structure, design, and functionality, paying attention to user comfort and loading speed.',
+        skill2Desc: 'I can collect, analyze, and organize data to obtain useful information. I work with spreadsheets, statistical indicators, and data processing methods. I can visualize results and generate reports for further analysis.',
+        skill3Desc: 'I apply mathematical methods to research and analyze various processes and systems. I can build mathematical models, perform calculations, and interpret results. I use mathematical tools to solve practical problems in IT.',
+        skill4Desc: 'I have knowledge of requirements analysis and design of information systems. I can create system structure, model interaction between components, and develop logical operating schemes. I understand the principles of building efficient software solutions.',
+        skill5Desc: 'I create clear and user-friendly interfaces for web and mobile applications. I work with prototyping, color schemes, components, and navigation elements. I use modern UI/UX approaches to ensure a comfortable user experience.',
+        skill6Desc: 'I use Google Apps Script to automate workflows with Google services. I create scripts for data processing in Google Sheets, automatic document and presentation generation, and optimization of routine processes. This improves efficiency when working with information.',
+        skill7: 'Hybrid mobile application development',
         contactFormTitle: 'Send a Message',
         contactSubtitle: 'Fill out the form and the message will be sent to my email.',
         contactNameLabel: 'Your name',
@@ -110,6 +135,9 @@ const translations = {
         openGalleryBtn: 'Open',
         modalCloseBtn: 'Close',
         contactSectionTitle: 'Contact Information',
+        projectDescSadibaSummary: 'A web project created to showcase the “Sadiba” hotel online.',
+        projectDescGUISummary: 'A GUI project designed for payroll automation.',
+        projectDescMatlabSummary: 'Modeling systems and analyzing data in MATLAB.',
         contactEmailLabelShort: 'Email:',
         contactTelegramLabel: 'Telegram:',
         contactInstagramLabel: 'Instagram:',
@@ -122,12 +150,21 @@ const translations = {
         projectTitleMatlab: 'System Modeling in MATLAB',
         projectDescMatlab: 'Modeling systems and analyzing data in MATLAB with visualization of the results.',
         eventSectionHeading: 'Latest & upcoming events',
+        eventDate1: 'October 2025',
         eventTitle1: 'Participation in IT-Kamianets Hackathon',
         eventDesc1: 'Team development and presentation of an interactive web platform for logic and technical quest challenges.',
+        eventDetails1: '<p><strong>More details:</strong></p><p>During the hackathon, I worked in a team to build an interactive web platform for logic and technical quest challenges.</p><p>I contributed to interface design, feature implementation, and system testing.</p><p>The event provided practical experience in teamwork and fast-paced IT project development.</p>',
+        eventDate2: 'December 2025',
         eventTitle2: 'GUI Course Project Defense',
         eventDesc2: 'Successful presentation and defense of a desktop application for automated payroll calculation.',
+        eventDetails2: '<p><strong>More details:</strong></p><p>A desktop application was developed to automate payroll calculations using modern graphical interface design techniques.</p><p>During the defense, I demonstrated the application’s features, user-friendly interface, and calculation accuracy.</p>',
+        eventDate3: 'May 2026',
         eventTitle3: 'Scientific-practical Conference at K-PNU',
         eventDesc3: 'A talk on mathematical modeling of complex information systems using MATLAB.',
+        eventDetails3: '<p><strong>More details:</strong></p><p>The conference featured a presentation on mathematical modeling of complex information systems using MATLAB.</p><p>The talk covered data analysis methods, model construction, and research results.</p>',
+        detailsBtn: 'More details',
+        detailsCloseBtn: 'Hide',
+        userName: 'Alina Siruk',
         footerCredit: 'Kamianets-Podilskyi National University named after Ivan Ohienko, 2026',
     },
 };
@@ -147,6 +184,9 @@ const getTranslation = (key) => {
 const translatePage = () => {
     const locale = translations[currentLang] || translations.uk;
     document.documentElement.lang = currentLang;
+    if (mainTitleName && locale.userName) {
+    mainTitleName.textContent = locale.userName;
+}
 
     document.querySelectorAll('[data-i18n]').forEach((element) => {
         const key = element.dataset.i18n;
@@ -173,6 +213,13 @@ const translatePage = () => {
         const translation = locale[key];
         if (translation !== undefined) {
             element.title = translation;
+        }
+    });
+
+    document.querySelectorAll('.details-btn').forEach((button) => {
+        const details = button.nextElementSibling;
+        if (details?.classList.contains('open')) {
+            button.textContent = locale.detailsCloseBtn || button.textContent;
         }
     });
 
@@ -225,9 +272,71 @@ if (savedTheme) {
     applyTheme(savedTheme);
 }
 
+function initSkillAccordions() {
+    const toggles = document.querySelectorAll('.skill-toggle');
+    toggles.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            const item = toggle.closest('.discipline-item');
+            const panel = item?.querySelector('.skill-panel');
+            if (!item || !panel) return;
+
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.discipline-item.open').forEach((opened) => {
+                if (opened !== item) {
+                    opened.classList.remove('open');
+                    const openedToggle = opened.querySelector('.skill-toggle');
+                    const openedPanel = opened.querySelector('.skill-panel');
+                    if (openedToggle) openedToggle.setAttribute('aria-expanded', 'false');
+                    if (openedPanel) openedPanel.setAttribute('aria-hidden', 'true');
+                }
+            });
+
+            if (isOpen) {
+                item.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+                panel.setAttribute('aria-hidden', 'true');
+            } else {
+                item.classList.add('open');
+                toggle.setAttribute('aria-expanded', 'true');
+                panel.setAttribute('aria-hidden', 'false');
+            }
+        });
+    });
+}
+
+function initPhotoZoom() {
+    const profileImg = document.querySelector('.profile-pic');
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('image-modal-img');
+    const modalClose = document.getElementById('image-modal-close');
+    if (!profileImg || !modal || !modalImg || !modalClose) return;
+
+    profileImg.addEventListener('click', () => {
+        modalImg.src = profileImg.src;
+        modalImg.alt = profileImg.alt || 'Profile photo';
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    });
+
+    const closeModal = () => {
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
+    });
+}
+
 function renderData(data) {
     if (mainTitleName && mainTitleName.textContent !== 'Помилка завантаження') {
-        mainTitleName.textContent = localStorage.getItem('user-name') || data.name;
+       mainTitleName.textContent = getTranslation('userName');
     }
     if (userEmailNode) userEmailNode.textContent = data.email;
     if (userCityNode) userCityNode.textContent = data.city;
@@ -287,7 +396,7 @@ function renderData(data) {
         galleryIndex = galleryImages.indexOf(img) >= 0 ? galleryImages.indexOf(img) : 0;
         modalImage.src = galleryImages[galleryIndex] || '';
         modalImage.alt = alt || title || '';
-        modalDesc.textContent = desc || '';
+        modalDesc.innerHTML = desc || '';
         updateGalleryIndicator();
         renderGalleryThumbnails();
         modal.classList.add('show');
@@ -383,8 +492,82 @@ async function loadUserData() {
     }
 }
 
+function initScrollHelpers() {
+    const header = document.querySelector('header');
+    const scrollTopBtn = document.createElement('button');
+    scrollTopBtn.id = 'scroll-top-btn';
+    scrollTopBtn.type = 'button';
+    scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
+    scrollTopBtn.title = 'Scroll to top';
+    scrollTopBtn.textContent = '↑';
+    scrollTopBtn.style.position = 'fixed';
+    scrollTopBtn.style.bottom = '24px';
+    scrollTopBtn.style.right = '24px';
+    scrollTopBtn.style.width = '48px';
+    scrollTopBtn.style.height = '48px';
+    scrollTopBtn.style.borderRadius = '50%';
+    scrollTopBtn.style.border = 'none';
+    scrollTopBtn.style.backgroundColor = 'var(--accent-color, #d65a8a)';
+    scrollTopBtn.style.color = '#fff';
+    scrollTopBtn.style.fontSize = '1.6rem';
+    scrollTopBtn.style.cursor = 'pointer';
+    scrollTopBtn.style.display = 'flex';
+    scrollTopBtn.style.alignItems = 'center';
+    scrollTopBtn.style.justifyContent = 'center';
+    scrollTopBtn.style.zIndex = '1500';
+    scrollTopBtn.style.boxShadow = '0 12px 28px rgba(0,0,0,0.18)';
+    scrollTopBtn.style.transition = 'transform 0.2s ease, opacity 0.3s ease';
+    scrollTopBtn.classList.add('hide');
+    document.body.appendChild(scrollTopBtn);
+
+    const styleEl = document.createElement('style');
+    styleEl.textContent = `
+        header { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        header.header-hidden { transform: translateY(-110%); }
+        header.header-scrolled { box-shadow: 0 12px 30px rgba(0,0,0,0.14); }
+        #scroll-top-btn.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        #scroll-top-btn.hide { opacity: 0; transform: translateY(12px); pointer-events: none; }
+    `;
+    document.head.appendChild(styleEl);
+
+    let lastY = window.scrollY;
+
+    const updateScrollUI = () => {
+        const currentY = window.scrollY;
+        if (header) {
+            if (currentY > lastY && currentY > 80) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            if (currentY > 10) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        }
+        if (scrollTopBtn) {
+            if (currentY > 250) {
+                scrollTopBtn.classList.add('show');
+                scrollTopBtn.classList.remove('hide');
+            } else {
+                scrollTopBtn.classList.add('hide');
+                scrollTopBtn.classList.remove('show');
+            }
+        }
+        lastY = currentY;
+    };
+
+    window.addEventListener('scroll', updateScrollUI, { passive: true });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    updateScrollUI();
+}
+
 loadUserData();
 translatePage();
+initSkillAccordions();
+initPhotoZoom();
+initScrollHelpers();
 
 if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
